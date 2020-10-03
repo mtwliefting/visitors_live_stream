@@ -24,6 +24,10 @@ app = Flask(__name__)
 def next():
     return get_shell_script_output_using_check_output()
 
+@app.route('/werkt',methods=['GET',])
+def next2():
+    return "Hoera!"
 
 
-app.run(debug=True)
+app.run(host='0.0.0.0')
+
