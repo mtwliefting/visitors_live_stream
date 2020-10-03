@@ -4,7 +4,7 @@ from subprocess import check_output
 from flask import Flask
 
 def get_shell_script_output_using_communicate():
-    session = Popen(['./some.sh'], stdout=PIPE, stderr=PIPE)
+    session = Popen(['./netstat.sh'], stdout=PIPE, stderr=PIPE)
     stdout, stderr = session.communicate()
     if stderr:
         raise Exception("Error "+str(stderr))
