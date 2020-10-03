@@ -20,13 +20,10 @@ def get_shell_script_output_using_check_output():
 
 app = Flask(__name__)
 
-@app.route('/stat',methods=['GET',])
+@app.route('/api/v1/visitors/total',methods=['GET',])
 def next():
     return get_shell_script_output_using_check_output()
 
-@app.route('/spotify/prev', methods=['GET'])
-def prev():
-    return get_shell_script_output_using_check_output()
 
 
 app.run(debug=True)
