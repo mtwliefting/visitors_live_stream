@@ -12,7 +12,7 @@ def get_shell_script_output_using_communicate():
 
 
 def get_shell_script_output_using_check_output():
-    stdout = check_output(['./some.sh']).decode('utf-8')
+    stdout = check_output(['./netstat.sh']).decode('utf-8')
     return stdout
 
 
